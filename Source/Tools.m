@@ -71,7 +71,15 @@
     }];
     return result;
 }
-
++ (BOOL)JudgeTheillegalCharacter:(NSString *)str{
+    //提示 标签不能输入特殊字符
+    NSString *value =@"^[A-Za-z0-9\\u4e00-\u9fa5]+$";
+    NSPredicate* emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", value];
+    if (![emailTest evaluateWithObject:str]) {
+        return YES;
+    }
+    return NO;
+}
 #pragma mark - check Dictionary is contain key
 +(BOOL)dicContain:(NSDictionary *)dic withKey:(NSString *)key{
     
