@@ -60,6 +60,8 @@
  */
 + (BOOL)isHasEmobj:(NSString *)str;
 
++ (BOOL)JudgeTheillegalCharacter:(NSString *)str;
+
 + (BOOL)isAllowedNotification;
 
 + (UIColor *) colorWithHexString: (NSString *) stringToConvert;
